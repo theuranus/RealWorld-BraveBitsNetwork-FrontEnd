@@ -1,5 +1,5 @@
 ---
-# BraveBits Network - A RealWorld App
+# BraveBits Network - A RealWorld App - Frontend side
 ---
 ## How to install? 
 > npm install
