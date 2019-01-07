@@ -1,6 +1,8 @@
 ---
 # BraveBits Network - A RealWorld App - Frontend side
 ---
+## Deployed: https://bbitnetwork.firebaseapp.com
+
 ## How to install? 
 > npm install
 
