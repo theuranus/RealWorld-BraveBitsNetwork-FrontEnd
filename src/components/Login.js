@@ -10,13 +10,13 @@ export default class Login extends React.Component {
     usernameInp = React.createRef();
     passwordInp = React.createRef();
 
-    handleClick = (doLogin, setError) => {
+    handleClick = () => {
         const username = this.usernameInp.current.value.trim()
         const password = this.passwordInp.current.value.trim()
         if (!username || username === "" || !password || password === "") {
-            setError('Please enter username or password')
+            authContainer.setError('Please enter username or password')
         } else {
-            doLogin({username, password}, this.props.history)
+            authContainer.doLogin({username, password}, this.props.history)
         }
         
     }
@@ -66,7 +66,7 @@ export default class Login extends React.Component {
                                     </fieldset>
                                     <button 
                                         className="btn btn-lg btn-primary pull-xs-right"
-                                        onClick={() => this.handleClick(doLogin, setError)}
+                                        onClick={this.handleClick}
                                     >
                                         Login 
                                     </button>

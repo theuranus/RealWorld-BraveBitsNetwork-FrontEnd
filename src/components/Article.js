@@ -3,6 +3,7 @@ import { Subscribe } from 'unstated';
 import authContainer from '../containers/authContainer'
 import postContainer from '../containers/postContainer'
 import { Link } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 
 export default class Article extends React.Component {
 
@@ -98,7 +99,8 @@ export default class Article extends React.Component {
                                     <div className="col-md-12">
                                         <p>{currentPost.describe}</p>
                                         <h2 id="introducing-ionic">{currentPost.title}</h2>
-                                        <p>{currentPost.content}</p>
+                                        {/* <p>{currentPost.content}</p> */}
+                                        <ReactMarkdown source={currentPost.content}></ReactMarkdown>
                                     </div>
                                 </div>
                                 <ul className="tag-list">

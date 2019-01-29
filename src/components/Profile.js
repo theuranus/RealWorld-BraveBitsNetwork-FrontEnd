@@ -10,12 +10,10 @@ export default class Profile extends React.Component {
         authContainer.getUserProfile(this.props.match.params.uid)
         postContainer.getMyArticles(this.props.match.params.uid)
     }
-
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.match.params.uid !== this.props.match.params.uid) {
-            authContainer.getUserProfile(nextProps.match.params.uid)
-            postContainer.getMyArticles(nextProps.match.params.uid)
-        }
+    
+    componentDidUpdate() {
+        authContainer.getUserProfile(this.props.match.params.uid)
+        postContainer.getMyArticles(this.props.match.params.uid)
     }
 
     render() {
